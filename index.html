@@ -5,526 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Help Gracie Heal | Gracie Voronkova</title>
 
+  <meta name="description" content="Support Gracie Voronkova’s medical treatment. Donation goal: $5,000." />
+  <meta property="og:title" content="Help Gracie Heal | Gracie Voronkova" />
+  <meta property="og:description" content="Support Gracie Voronkova’s medical treatment. Every donation helps with treatment and recovery expenses." />
+  <meta property="og:image" content="https://YOUR-LINK.vercel.app/family-2.jpeg" />
+  <meta property="og:url" content="https://YOUR-LINK.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <style>
-    :root {
-      --bg: #fffaf5;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #c47f51;
-      --accent2: #8f5c3d;
-      --green: #00c244;
-      --zelle: #6d1ed4;
-      --shadow: 0 20px 50px rgba(31,41,55,.12);
-      --radius: 28px;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg, #fffaf5 0%, #f9efe6 55%, #ffffff 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .wrap {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,250,245,.9);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(196,127,81,.15);
-    }
-
-    .nav-in {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 12px;
-    }
-
-    .brand {
-      font-weight: 900;
-      font-size: 17px;
-    }
-
-    .langs {
-      display: flex;
-      gap: 8px;
-    }
-
-    .langs button {
-      border: 1px solid rgba(31,41,55,.14);
-      background: #fff;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .langs button.active {
-      background: var(--text);
-      color: #fff;
-    }
-
-    .hero {
-      padding: 56px 0 36px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-flex;
-      background: #fff;
-      border: 1px solid rgba(196,127,81,.18);
-      padding: 8px 14px;
-      border-radius: 999px;
-      color: var(--accent2);
-      font-weight: 900;
-      font-size: 14px;
-    }
-
-    h1 {
-      font-size: clamp(40px, 6vw, 76px);
-      line-height: .96;
-      margin: 18px 0;
-      letter-spacing: -2.3px;
-    }
-
-    .lead {
-      font-size: clamp(18px, 2vw, 23px);
-      color: #4b5563;
-      max-width: 650px;
-    }
-
-    .goal-card {
-      margin-top: 28px;
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(196,127,81,.18);
-      border-radius: 26px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      max-width: 520px;
-    }
-
-    .goal-label {
-      color: var(--muted);
-      font-size: 15px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .8px;
-    }
-
-    .goal-amount {
-      margin-top: 4px;
-      font-size: clamp(42px, 7vw, 70px);
-      line-height: 1;
-      font-weight: 950;
-      color: var(--accent2);
-    }
-
-    .goal-note {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      text-decoration: none;
-      border: 0;
-      border-radius: 999px;
-      padding: 16px 24px;
-      font-weight: 950;
-      font-size: 17px;
-      cursor: pointer;
-      box-shadow: 0 10px 24px rgba(0,0,0,.08);
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .btn.cash {
-      background: var(--green);
-      color: #fff;
-    }
-
-    .btn.zelle {
-      background: var(--zelle);
-      color: #fff;
-    }
-
-    .photos {
-      position: relative;
-    }
-
-    .main-photo {
-      width: 100%;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      display: block;
-    }
-
-    .small-photo {
-      position: absolute;
-      right: -12px;
-      bottom: -28px;
-      width: 48%;
-      border-radius: 24px;
-      border: 8px solid #fff;
-      box-shadow: var(--shadow);
-    }
-
-    section {
-      padding: 52px 0;
-    }
-
-    .card {
-      background: rgba(255,255,255,.88);
-      border: 1px solid rgba(196,127,81,.16);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 32px;
-    }
-
-    .section-title {
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.05;
-      margin: 0 0 18px;
-      letter-spacing: -1.2px;
-    }
-
-    .story p {
-      font-size: 18px;
-      color: #374151;
-    }
-
-    .donate-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .pay-card {
-      text-align: center;
-    }
-
-    .qr {
-      width: min(340px, 100%);
-      border-radius: 24px;
-      border: 1px solid #eee;
-      background: #fff;
-      margin: 10px auto 18px;
-      display: block;
-    }
-
-    .cash-tag {
-      font-size: 34px;
-      font-weight: 950;
-      margin: 22px 0;
-      color: #111827;
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .verse {
-      text-align: center;
-      font-size: 25px;
-      font-weight: 800;
-      color: #374151;
-    }
-
-    .footer {
-      text-align: center;
-      color: #6b7280;
-      padding: 26px 0 110px;
-    }
-
-    .sticky {
-      position: fixed;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      z-index: 30;
-      display: none;
-    }
-
-    .sticky .btn {
-      width: 100%;
-    }
-
-    @media(max-width: 820px) {
-      .grid,
-      .donate-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 34px;
-      }
-
-      .small-photo {
-        right: 10px;
-        width: 43%;
-        bottom: -20px;
-      }
-
-      .card {
-        padding: 24px;
-      }
-
-      .sticky {
-        display: block;
-      }
-
-      h1 {
-        letter-spacing: -1.4px;
-      }
-
-      .brand {
-        font-size: 14px;
-      }
-
-      .langs button {
-        padding: 7px 9px;
-      }
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:#fff7ef;color:#1f2937;line-height:1.6}
+    .wrap{max-width:1100px;margin:auto;padding:20px}
+    .nav{position:sticky;top:0;background:#fffaf5;padding:12px 0;border-bottom:1px solid #ead7c8;z-index:10}
+    .nav .wrap{display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:900}
+    button{border:0;border-radius:30px;padding:9px 13px;font-weight:800;background:white}
+    button.active{background:#1f2937;color:white}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:50px 0}
+    h1{font-size:56px;line-height:1;margin:15px 0}
+    .lead{font-size:21px;color:#4b5563}
+    .badge{display:inline-block;background:white;color:#8f5c3d;border-radius:30px;padding:8px 14px;font-weight:900}
+    .goal{background:white;border-radius:25px;padding:25px;margin:25px 0;box-shadow:0 15px 40px #0001}
+    .goal small{color:#6b7280;font-weight:900;text-transform:uppercase}
+    .amount{font-size:58px;font-weight:900;color:#8f5c3d}
+    .btn{display:inline-block;text-decoration:none;border-radius:40px;padding:15px 22px;margin:6px;font-weight:900;color:white}
+    .donate{background:#c47f51}.cash{background:#00c244}.zelle{background:#6d1ed4}
+    img{max-width:100%}
+    .photo{border-radius:28px;box-shadow:0 15px 40px #0002}
+    section{padding:35px 0}
+    .card{background:white;border-radius:28px;padding:28px;box-shadow:0 15px 40px #0001}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .qr{max-width:330px;border-radius:20px}
+    .center{text-align:center}
+    .cash-tag{font-size:34px;font-weight:900}
+    .sticky{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:20}
+    .sticky a{display:block;text-align:center}
+    @media(max-width:800px){.hero,.grid{grid-template-columns:1fr}h1{font-size:42px}.sticky{display:block}}
   </style>
 </head>
 
 <body>
-
   <div class="nav">
-    <div class="wrap nav-in">
+    <div class="wrap">
       <div class="brand">Gracie Voronkova</div>
-
-      <div class="langs">
-        <button class="lang-btn active" onclick="setLang('ru', this)">RU</button>
-        <button class="lang-btn" onclick="setLang('en', this)">EN</button>
-        <button class="lang-btn" onclick="setLang('ua', this)">UA</button>
+      <div>
+        <button class="active" onclick="setLang('ru',this)">RU</button>
+        <button onclick="setLang('en',this)">EN</button>
+        <button onclick="setLang('ua',this)">UA</button>
       </div>
     </div>
   </div>
 
-  <main>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="badge" id="badge">Сбор на лечение</div>
+        <h1 id="title">Поможем Грейси выздороветь</h1>
+        <p class="lead" id="lead">Маленькой Грейси предстоит долгий путь лечения. Мы просим вашей молитвы и поддержки для семьи Воронковых.</p>
 
-    <section class="hero">
-      <div class="wrap grid">
-
-        <div>
-          <div class="badge" data-i="badge">Сбор на лечение</div>
-
-          <h1 data-i="title">Поможем Грейси выздороветь</h1>
-
-          <p class="lead" data-i="lead">
-            Маленькой Грейси предстоит долгий путь лечения. Мы просим вашей молитвы и поддержки для семьи Воронковых.
-          </p>
-
-          <div class="goal-card">
-            <div class="goal-label" data-i="goalLabel">Общая сумма сбора</div>
-            <div class="goal-amount">$5,000</div>
-            <div class="goal-note" data-i="goalNote">
-              Эта сумма поможет покрыть лечение, обследования и необходимые расходы для восстановления Грейси.
-            </div>
-          </div>
-
-          <div class="cta">
-            <a class="btn primary" href="#donate" data-i="btnMain">❤️ Пожертвовать</a>
-            <a class="btn cash" href="https://cash.app/$AntonVoronkov" target="_blank">Cash App</a>
-            <a class="btn zelle" href="#zelle">Zelle QR</a>
-          </div>
+        <div class="goal">
+          <small id="goalLabel">Общая сумма сбора</small>
+          <div class="amount">$5,000</div>
+          <p id="goalText">Эта сумма поможет покрыть лечение, обследования и необходимые расходы для восстановления Грейси.</p>
         </div>
 
-        <div class="photos">
-          <img src="family-2.jpeg" class="main-photo" alt="Gracie Voronkova family">
-          <img src="family-1.jpeg" class="small-photo" alt="Voronkov family">
-        </div>
-
+        <a class="btn donate" href="#donate" id="btnDonate">❤️ Пожертвовать</a>
+        <a class="btn cash" href="https://cash.app/$AntonVoronkov" target="_blank">Cash App</a>
+        <a class="btn zelle" href="#zelle">Zelle QR</a>
       </div>
-    </section>
+
+      <div>
+        <img src="family-2.jpeg" class="photo" alt="Gracie family">
+      </div>
+    </div>
 
     <section>
-      <div class="wrap">
-        <div class="card story">
-          <h2 class="section-title" data-i="storyTitle">История Грейси</h2>
-          <div data-i="storyText"></div>
-        </div>
+      <div class="card">
+        <h2 id="storyTitle">История Грейси</h2>
+        <div id="storyText"></div>
       </div>
     </section>
 
     <section id="donate">
-      <div class="wrap">
-        <h2 class="section-title" data-i="donateTitle">Как помочь</h2>
+      <h2 id="helpTitle">Как помочь</h2>
+      <div class="grid">
+        <div class="card center" id="zelle">
+          <h3>Zelle</h3>
+          <img src="zelle-qr.jpeg" class="qr" alt="Zelle QR">
+          <p><b>Anton Voronkov</b><br>voron.personal@gmail.com</p>
+          <p id="zelleText">Откройте приложение банка и отсканируйте QR-код Zelle.</p>
+        </div>
 
-        <div class="donate-grid">
-
-          <div id="zelle" class="card pay-card">
-            <h3>Zelle</h3>
-            <img src="zelle-qr.jpeg" class="qr" alt="Zelle QR code">
-            <p>
-              <b>Anton Voronkov</b><br>
-              voron.personal@gmail.com
-            </p>
-            <p class="note" data-i="zelleNote">
-              Откройте приложение банка и отсканируйте QR-код Zelle.
-            </p>
-          </div>
-
-          <div class="card pay-card">
-            <h3>Cash App</h3>
-            <div class="cash-tag">$AntonVoronkov</div>
-            <a class="btn cash" href="https://cash.app/$AntonVoronkov" target="_blank" data-i="cashBtn">
-              Открыть Cash App
-            </a>
-            <p class="note" data-i="cashNote">
-              Нажмите кнопку, чтобы перейти к пожертвованию через Cash App.
-            </p>
-          </div>
-
+        <div class="card center">
+          <h3>Cash App</h3>
+          <div class="cash-tag">$AntonVoronkov</div>
+          <a class="btn cash" href="https://cash.app/$AntonVoronkov" target="_blank" id="cashBtn">Открыть Cash App</a>
+          <p id="cashText">Нажмите кнопку, чтобы перейти к пожертвованию через Cash App.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="wrap">
-        <div class="card">
-          <p class="verse">
-            “For with God nothing shall be impossible.”<br>
-            <span style="font-size:18px;color:#6b7280">Luke 1:37</span>
-          </p>
-        </div>
+      <div class="card center">
+        <h2>“For with God nothing shall be impossible.”</h2>
+        <p>Luke 1:37</p>
       </div>
     </section>
-
-  </main>
-
-  <div class="footer">
-    © Gracie Voronkova Support Page
   </div>
 
   <div class="sticky">
-    <a class="btn primary" href="#donate" data-i="sticky">❤️ Пожертвовать сейчас</a>
+    <a class="btn donate" href="#donate" id="stickyBtn">❤️ Пожертвовать сейчас</a>
   </div>
 
-  <script>
-    const t = {
-      ru: {
-        badge: 'Сбор на лечение',
-        title: 'Поможем Грейси выздороветь',
-        lead: 'Маленькой Грейси предстоит долгий путь лечения. Мы просим вашей молитвы и поддержки для семьи Воронковых.',
-        goalLabel: 'Общая сумма сбора',
-        goalNote: 'Эта сумма поможет покрыть лечение, обследования и необходимые расходы для восстановления Грейси.',
-        btnMain: '❤️ Пожертвовать',
-        storyTitle: 'История Грейси',
-        donateTitle: 'Как помочь',
-        zelleNote: 'Откройте приложение банка и отсканируйте QR-код Zelle.',
-        cashBtn: 'Открыть Cash App',
-        cashNote: 'Нажмите кнопку, чтобы перейти к пожертвованию через Cash App.',
-        sticky: '❤️ Пожертвовать сейчас',
-        storyText: `
-          <p>Наша доченька <b>Грейси Воронкова</b> родилась <b>16 мая 2023 года</b>. С самого начала ей пришлось пройти через непростые испытания.</p>
-          <p>Всё началось с желудочного гриппа, а затем назначенные антибиотики только усложнили её состояние. Со временем здоровье Грейси становилось всё хуже, и семья не могла понять причину происходящего.</p>
-          <p>Наступил момент, когда её состояние стало настолько тяжёлым, что даже врачи в Америке не могли дать необходимые ответы. Но именно тогда Бог послал в их жизнь замечательного доктора из Украины, которая сейчас живёт в Америке.</p>
-          <p>После многочисленных обследований выяснилось, что в организме происходят серьёзные процессы. Впереди долгий путь лечения, который может занять несколько месяцев.</p>
-          <p>Спасибо каждому, кто молится за Грейси, поддерживает семью и верит вместе с ними в её полное восстановление.</p>
-        `
-      },
+<script>
+const text = {
+  ru: {
+    badge:"Сбор на лечение",
+    title:"Поможем Грейси выздороветь",
+    lead:"Маленькой Грейси предстоит долгий путь лечения. Мы просим вашей молитвы и поддержки для семьи Воронковых.",
+    goalLabel:"Общая сумма сбора",
+    goalText:"Эта сумма поможет покрыть лечение, обследования и необходимые расходы для восстановления Грейси.",
+    btnDonate:"❤️ Пожертвовать",
+    storyTitle:"История Грейси",
+    helpTitle:"Как помочь",
+    zelleText:"Откройте приложение банка и отсканируйте QR-код Zelle.",
+    cashBtn:"Открыть Cash App",
+    cashText:"Нажмите кнопку, чтобы перейти к пожертвованию через Cash App.",
+    stickyBtn:"❤️ Пожертвовать сейчас",
+    storyText:`<p>Наша доченька <b>Грейси Воронкова</b> родилась <b>16 мая 2023 года</b>. С самого начала ей пришлось пройти через непростые испытания.</p><p>Всё началось с желудочного гриппа, а затем назначенные антибиотики только усложнили её состояние. Со временем здоровье Грейси становилось всё хуже.</p><p>Когда состояние стало тяжёлым, Бог послал в их жизнь замечательного доктора из Украины, которая сейчас живёт в Америке.</p><p>После обследований выяснилось, что в организме происходят серьёзные процессы. Впереди долгий путь лечения.</p><p>Спасибо каждому, кто молится за Грейси и поддерживает семью.</p>`
+  },
+  en: {
+    badge:"Medical Fundraiser",
+    title:"Help Gracie Heal",
+    lead:"Little Gracie is facing a long journey of treatment. We ask for your prayers and support for the Voronkov family.",
+    goalLabel:"Fundraising Goal",
+    goalText:"This amount will help cover medical treatment, tests, and necessary expenses for Gracie’s recovery.",
+    btnDonate:"❤️ Donate",
+    storyTitle:"Gracie’s Story",
+    helpTitle:"How to Help",
+    zelleText:"Open your banking app and scan the Zelle QR code.",
+    cashBtn:"Open Cash App",
+    cashText:"Tap the button to donate through Cash App.",
+    stickyBtn:"❤️ Donate Now",
+    storyText:`<p>Our precious daughter <b>Gracie Voronkova</b> was born on <b>May 16, 2023</b>. From the beginning, she has faced difficult health challenges.</p><p>It started with a stomach virus, and prescribed antibiotics made her condition more complicated.</p><p>When her condition became very serious, God brought a wonderful Ukrainian doctor, now living in America, into their lives.</p><p>After many tests, serious processes in her body were discovered. Gracie now faces a long treatment journey.</p><p>Thank you to everyone who prays for Gracie and supports the family.</p>`
+  },
+  ua: {
+    badge:"Збір на лікування",
+    title:"Допоможіть Грейсі одужати",
+    lead:"Маленьку Грейсі чекає довгий шлях лікування. Ми просимо вашої молитви та підтримки для родини Воронкових.",
+    goalLabel:"Загальна сума збору",
+    goalText:"Ця сума допоможе покрити лікування, обстеження та необхідні витрати для відновлення Грейсі.",
+    btnDonate:"❤️ Пожертвувати",
+    storyTitle:"Історія Грейсі",
+    helpTitle:"Як допомогти",
+    zelleText:"Відкрийте банківський додаток і відскануйте QR-код Zelle.",
+    cashBtn:"Відкрити Cash App",
+    cashText:"Натисніть кнопку, щоб перейти до пожертви через Cash App.",
+    stickyBtn:"❤️ Пожертвувати зараз",
+    storyText:`<p>Наша донечка <b>Грейсі Воронкова</b> народилася <b>16 травня 2023 року</b>. Від самого початку їй довелося пройти через непрості випробування.</p><p>Усе почалося зі шлункового грипу, а потім антибіотики лише ускладнили її стан.</p><p>Коли її стан став важким, Бог послав у їхнє життя чудового лікаря з України, яка зараз живе в Америці.</p><p>Після обстежень з’ясувалося, що в організмі відбуваються серйозні процеси. Попереду довгий шлях лікування.</p><p>Дякуємо кожному, хто молиться за Грейсі та підтримує родину.</p>`
+  }
+};
 
-      en: {
-        badge: 'Medical Fundraiser',
-        title: 'Help Gracie Heal',
-        lead: 'Little Gracie is facing a long journey of treatment. We are asking for your prayers and support for the Voronkov family.',
-        goalLabel: 'Fundraising Goal',
-        goalNote: 'This amount will help cover medical treatment, tests, and necessary expenses for Gracie’s recovery.',
-        btnMain: '❤️ Donate',
-        storyTitle: "Gracie's Story",
-        donateTitle: 'How to Help',
-        zelleNote: 'Open your banking app and scan the Zelle QR code.',
-        cashBtn: 'Open Cash App',
-        cashNote: 'Tap the button to donate through Cash App.',
-        sticky: '❤️ Donate Now',
-        storyText: `
-          <p>Our precious daughter <b>Gracie Voronkova</b> was born on <b>May 16, 2023</b>. From the very beginning, she has faced difficult health challenges.</p>
-          <p>It started with a stomach virus, and then prescribed antibiotics made her condition even more complicated. Over time, Gracie’s health continued to decline, and the family could not understand the cause.</p>
-          <p>There came a moment when her condition became so serious that even doctors in the United States could not provide the answers and help she needed. Then God brought a wonderful Ukrainian doctor, now living in America, into their lives.</p>
-          <p>After many medical tests, serious processes in her body were discovered. Gracie now faces a long treatment journey that may take several months.</p>
-          <p>Thank you to everyone who prays for Gracie, supports the family, and believes with them for her full recovery.</p>
-        `
-      },
-
-      ua: {
-        badge: 'Збір на лікування',
-        title: 'Допоможіть Грейсі одужати',
-        lead: 'Маленьку Грейсі чекає довгий шлях лікування. Ми просимо вашої молитви та підтримки для родини Воронкових.',
-        goalLabel: 'Загальна сума збору',
-        goalNote: 'Ця сума допоможе покрити лікування, обстеження та необхідні витрати для відновлення Грейсі.',
-        btnMain: '❤️ Пожертвувати',
-        storyTitle: 'Історія Грейсі',
-        donateTitle: 'Як допомогти',
-        zelleNote: 'Відкрийте банківський додаток і відскануйте QR-код Zelle.',
-        cashBtn: 'Відкрити Cash App',
-        cashNote: 'Натисніть кнопку, щоб перейти до пожертви через Cash App.',
-        sticky: '❤️ Пожертвувати зараз',
-        storyText: `
-          <p>Наша донечка <b>Грейсі Воронкова</b> народилася <b>16 травня 2023 року</b>. Від самого початку їй довелося пройти через непрості випробування.</p>
-          <p>Усе почалося зі шлункового грипу, а потім призначені антибіотики лише ускладнили її стан. З часом здоров’я Грейсі погіршувалося, і родина не могла зрозуміти причину.</p>
-          <p>Настав момент, коли її стан став настільки важким, що навіть лікарі в Америці не могли дати потрібні відповіді. Саме тоді Бог послав у їхнє життя чудового лікаря з України, яка зараз живе в Америці.</p>
-          <p>Після численних обстежень з’ясувалося, що в організмі відбуваються серйозні процеси. Попереду довгий шлях лікування, який може тривати кілька місяців.</p>
-          <p>Дякуємо кожному, хто молиться за Грейсі, підтримує родину та вірить разом із ними в її повне відновлення.</p>
-        `
-      }
-    };
-
-    function setLang(lang, button) {
-      document.documentElement.lang = lang;
-
-      document.querySelectorAll('[data-i]').forEach(el => {
-        const key = el.getAttribute('data-i');
-        if (t[lang] && t[lang][key]) {
-          el.innerHTML = t[lang][key];
-        }
-      });
-
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-
-      if (button) {
-        button.classList.add('active');
-      }
-    }
-
-    setLang('ru', document.querySelector('.lang-btn'));
-  </script>
+function setLang(lang, btn){
+  for(let key in text[lang]){
+    const el=document.getElementById(key);
+    if(el) el.innerHTML=text[lang][key];
+  }
+  document.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+}
+setLang("ru", document.querySelector("button"));
+</script>
 
 </body>
 </html>
